@@ -1,8 +1,17 @@
 aid: hunters
 name: Hunters
-description: 'Hunters is a company surfaced as a portfolio company of bessemer-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Hunters is an AI-driven, next-generation SIEM and SOC platform that helps
+  security operations teams do more with less by automating threat detection,
+  triage, investigation, correlation, and response across an organization's
+  entire security stack. It ingests data from cloud, identity, endpoint, and
+  network sources (including customer-owned Snowflake and cloud data lakes),
+  applies built-in detectors and threat-hunting content, and surfaces the alerts
+  that matter with automated enrichment. Hunters exposes an API/webhook data
+  ingestion path and outbound webhook automation recipes; the runtime API at
+  api.hunters.ai is authentication-gated and no public OpenAPI is published. This
+  profile was surfaced as a portfolio company of Bessemer Venture Partners and
+  enriched by the API Evangelist enrichment pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/hunters/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +19,49 @@ x-backed-by:
 - bessemer-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://www.hunters.security/favicon.ico
 tags:
 - Company
 - Cybersecurity
-apis: []
+- SIEM
+- SOC
+- Threat Detection
+- Security Operations
+- Incident Response
+- Threat Hunting
+apis:
+- name: Hunters SOC Platform API
+  description: >-
+    Authentication-gated runtime API for the Hunters SOC platform, used for data
+    ingestion (API/webhook collection) and platform automation. No public OpenAPI
+    is published; the developer knowledge base is hosted on docs.hunters.ai.
+  humanURL: https://docs.hunters.ai/
+  baseURL: https://api.hunters.ai
+  tags:
+  - SIEM
+  - SOC
+  - Security
+  properties:
+  - type: Documentation
+    url: https://docs.hunters.ai/
+  - type: LLMsTxt
+    url: llms/hunters-llms.txt
+  - type: Webhooks
+    url: asyncapi/hunters-webhooks.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,4 +69,31 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.hunters.ai/
+  url: https://www.hunters.security/
+- type: Documentation
+  url: https://docs.hunters.ai/
+- type: Blog
+  url: https://www.hunters.security/en/blog
+- type: SignUp
+  url: https://app.hunters.ai/
+- type: Login
+  url: https://app.hunters.ai/
+- type: TermsOfService
+  url: https://www.hunters.security/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.hunters.security/privacy-policy
+- type: TrustCenter
+  url: https://trust.hunters.ai/
+- type: ChangeLog
+  url: changelog/hunters-changelog.yml
+- type: Webhooks
+  url: asyncapi/hunters-webhooks.yml
+- type: LLMsTxt
+  url: llms/hunters-llms.txt
+- type: DomainSecurity
+  url: security/hunters-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

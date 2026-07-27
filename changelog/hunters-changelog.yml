@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.hunters.ai/docs/updates
+scheme: monthly-numbered
+scheme_note: >-
+  Hunters publishes dated release notes titled "Release Notes - <Month Year> - #<n>",
+  a monthly sequential numbering scheme. Entries are predominantly new/updated threat
+  detectors, campaigns, and threat-hunting content for the SOC platform rather than
+  breaking API changes.
+current: 'June 2026 - #2'
+entries:
+- version: 'June 2026 - #2'
+  date: '2026-06-22'
+  breaking: false
+  highlights:
+  - Publicly Accessible Storage Resources assessment identifying exposed AWS S3,
+    Azure Blob Storage, and Google Cloud Storage buckets.
+- version: 'June 2026 - #1'
+  date: '2026-06-21'
+  breaking: false
+  highlights:
+  - Campaign detecting Suspicious User-Agent in Azure Non-Interactive/SPN Sign-In
+    Activity across offensive tools (Kali Linux, Scout Suite).
+- version: 'June 2026'
+  date: '2026-06-14'
+  breaking: false
+  highlights:
+  - Multi-Layer Encoded Command Execution threat hunt for adversaries using layered
+    Base64 encoding to evade detection (Windows, Linux, macOS).
+- version: 'May 2026 - #2'
+  date: '2026-05-16'
+  breaking: false
+  highlights:
+  - Azure Service Principal anomalous User Agent detection with app-registration
+    correlation to reduce false positives.
+- version: 'May 2026 - #1'
+  date: '2026-05-01'
+  breaking: false
+  highlights:
+  - New Context Unified Anomalous Login detector replacing 12 legacy detectors;
+    Windows password-change enrichment and updated scoring model.

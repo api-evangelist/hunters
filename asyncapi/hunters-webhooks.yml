@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.hunters.ai/llms.txt
+spec_type: Webhooks
+summary: >-
+  Hunters (next-gen SIEM / SOC platform) documents a webhook surface in two
+  directions. No AsyncAPI document is published; this captures the documented
+  webhook catalog only. Detail is limited to what the public knowledge base
+  exposes; the runtime API (api.hunters.ai) is authentication-gated and ships no
+  public OpenAPI.
+webhooks:
+- name: data-ingestion-webhook
+  direction: inbound
+  purpose: >-
+    Connect a data source to Hunters by pushing events to a Hunters-provided
+    ingestion endpoint (the "API/webhook" collection method), for sources that
+    can post logs/events over HTTP.
+  docs: https://docs.hunters.ai/docs/connect-a-data-source-using-apiwebhook.md
+- name: response-webhook-recipe
+  direction: outbound
+  purpose: >-
+    Automation "recipes" that fire an outbound webhook as a response/notification
+    action when findings or workflows trigger; created from a template in the
+    platform's automation surface.
+  docs: https://docs.hunters.ai/docs/create-a-webhook-recipe-from-template.md

@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of /.well-known/* on Hunters hosts
+notes: >-
+  www.hunters.ai 301-redirects to www.hunters.security; docs are hosted on
+  docs.hunters.ai (Document360). No .well-known discovery documents are
+  published on any host. Absence recorded as valid data.
+hosts:
+- host: https://www.hunters.security
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://docs.hunters.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /llms.txt
+    status: 200
+    file: ../llms/hunters-llms.txt
